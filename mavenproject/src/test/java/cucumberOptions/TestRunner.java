@@ -8,10 +8,11 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions
-(features="src/test/java/features",glue="stepDefinition",tags="@Test",
+(features="src/test/java/features",glue="stepDefinition",
+//tags="@Test",
 monochrome = true,
-strict=true)
-
+strict=true,
+format = {"pretty", "html:target/cucumber-htmlreport"})
 public class TestRunner {
 
 }
